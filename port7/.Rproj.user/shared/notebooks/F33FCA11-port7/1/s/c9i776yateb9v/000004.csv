@@ -1,0 +1,8 @@
+"0","library(ggfortify)"
+"2","Loading required package: ggplot2
+"
+"2","Use suppressPackageStartupMessages() to eliminate package
+startup messages
+"
+"0","# install.packages('ggfortify')"
+"0",""
