@@ -13,11 +13,16 @@ knitr::opts_chunk$set(echo = TRUE)
 
 In this portfolio, I aim to be familair with *basic* simulation 
 
-## Source
+## Source & Reference 
 
 1) Introducing Monte Carlo Methods with R (Robert & Casella, 2010)
 2) https://towardsdatascience.com/generate-simulated-dataset-for-linear-model-in-r-469a5e2f4c2e   
-3) https://datascience4psych.github.io/DataScience4Psych/welcome-to-simulating-data.html
+**3) https://datascience4psych.github.io/DataScience4Psych/welcome-to-simulating-data.html** 
+4) https://cran.r-project.org/web/packages/holodeck/vignettes/simulating-data.html  
+5) https://blog.revolutionanalytics.com/2016/02/multivariate_data_with_r.html  
+6. https://s3.amazonaws.com/assets.datacamp.com/production/course_6521/slides/chapter2.pdf
+
+
 
 
 ## packages
@@ -144,4 +149,71 @@ y=3*x1+2*x2+error
 model1<-lm(y~x1+x2)
 summary(model1)
 autoplot(model1)
+```
+
+
+##  Bivariate normal
+
+```{r}
+
+library(MASS)
+
+biv<-mvrnorm(100, # sample size
+            mu=c(0,0), # Mu
+            Sigma = matrix(c(1,0.5,1,0.5),2)) # Covariance matrix
+
+print(head(biv,10))
+```
+
+visualization
+
+```{r}
+
+# kernel density estimation 
+# TMI: Yoo Ri currently did not learn what kernel density is. 
+
+biv.kd<-kde2d(biv[,1], biv[,2], n=50)
+image(biv.kd)
+contour(biv.kd, add=TRUE)
+
+
+
+```
+
+
+## Multivariate Normal Simulation
+
+ Generating multivariate normal data 
+```{r}
+
+library(MASS)
+
+#creating random multivariate data that has
+# sample size of 50, mean of 0.5,0,10, and covariance matrix is as sigma
+
+mul1 <- MASS::mvrnorm(n = 50,       
+                 mu = c(0.5, 0, 10),
+                 Sigma = matrix(c(1, 0.2, 0.3,
+                                  0.2, 1, 0.6,
+                                  0.3, 0.6, 1),
+                                nrow = 3))
+
+print(mul1)
+
+```
+
+
+
+Correlation matrix
+```{r}
+
+
+cor(mul1)
+
+```
+
+
+
+```
+
 ```

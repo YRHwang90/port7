@@ -1,0 +1,28 @@
+{
+    "id": "38C962FB",
+    "path": null,
+    "project_path": null,
+    "type": "object_explorer",
+    "hash": "0",
+    "contents": "",
+    "dirty": false,
+    "created": 1646973105055.0,
+    "source_on_save": false,
+    "relative_order": 2,
+    "properties": {
+        "id": "b949f7f87d614eb6894eea51042a3fcf",
+        "name": "mul1.kd",
+        "title": "mul1.kd",
+        "language": "R",
+        "source_window_id": "",
+        "Source": "Source"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1646971877,
+    "encoding": "",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1646973105055,
+    "read_only": false,
+    "read_only_alternatives": []
+}

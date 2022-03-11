@@ -1,0 +1,6 @@
+"0",""
+"0","# kernel density estimation "
+"0","# TMI: Yoo Ri currently did not learn what kernel density is. "
+"0",""
+"0","biv.kd<-kde2d(biv[,1], biv[,2], n=50)"
+"0","image(biv.kd)"
