@@ -2,7 +2,7 @@
 title: "portfolio7"
 author: "Yoo Ri Hwang"
 date: "3/9/2022"
-output: html_document
+output: github_document
 ---
 
 ```{r setup, include=FALSE}
